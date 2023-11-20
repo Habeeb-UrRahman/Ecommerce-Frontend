@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import './NewsLetter.css';
-
 const NewsLetter = () => {
   const [isSubscribed, setSubscribed] = useState(false);
   const [email, setEmail] = useState('');
 
+  const handleSubscribe = () => {
+    if (email.trim() !== '') {
+      setSubscribed(true);
+    }
+  };
   return (
     <div className='newsletter'>
       <h1>Get Exclusive Offers On Your Email</h1>
@@ -19,7 +23,7 @@ const NewsLetter = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button>Subscribe</button>
+          <button onClick={handleSubscribe}>Subscribe</button>
         </div>
       )}
     </div>
@@ -27,4 +31,5 @@ const NewsLetter = () => {
 };
 
 export default NewsLetter;
+
 
