@@ -6,6 +6,7 @@ const Popular = (props) => {
   return (
     <div className='popular'>
       <h1>POPULAR PICKS JUST FOR YOU!</h1>
+      <h3>## Products need to be added from the admin panel to the user side of the site. ##</h3>
       <hr />
       <div className="popular-item">
         {props.data.map((item,i)=>{
